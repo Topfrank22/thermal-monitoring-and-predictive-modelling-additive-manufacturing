@@ -1,0 +1,84 @@
+MEDIATION ANALYSIS SUMMARY
+Target: peso_rottura_kg
+n = 10 specimens (paused only)
+Baseline R²(peso ~ pausa_s) = 0.342
+Feature classification: bed_temp_C = DIRECT IR measure
+
+=== CORRELATIONS (sorted by |Pearson r|) ===
+              feature  pearson_r  pearson_p  spearman_r  spearman_p
+           bed_temp_C   0.784695   0.007184    0.500043    0.141073
+                hr_t2  -0.736505   0.015126   -0.500043    0.141073
+              delta_T  -0.729695   0.016600   -0.394771    0.258902
+                    A  -0.724592   0.017769   -0.552679    0.097545
+                hr_t1  -0.693233   0.026225   -0.552679    0.097545
+                   T0   0.686062   0.028487    0.447407    0.194799
+                   T1   0.645058   0.044016    0.342135    0.333206
+      heating_rate_t0  -0.620266   0.055719   -0.605316    0.063685
+              pausa_s  -0.584871   0.075737   -0.548408    0.100708
+                hr_t3  -0.512493   0.129871   -0.256601    0.474207
+                   T3   0.477076   0.163243    0.289499    0.417181
+                   T4   0.435588   0.208290    0.151329    0.676445
+                   T5   0.393683   0.260336    0.328976    0.353321
+                alpha  -0.353193   0.316771   -0.355294    0.313697
+                   T2   0.344381   0.329832    0.151329    0.676445
+roi_std_spaziale_mean  -0.159470   0.659896   -0.309237    0.384604
+                   T6   0.108704   0.765000    0.000000    1.000000
+               t_star   0.001959   0.995715    0.171067    0.636550
+
+=== R² UNIVARIATO (sorted by linear R²) ===
+              feature       R2  slope_p  R2_quad   p_quad category
+           bed_temp_C 0.615747 0.007184 0.709735 0.013176   direct
+                hr_t2 0.542439 0.015126 0.694846 0.015697   extrap
+              delta_T 0.532454 0.016600 0.706048 0.013771   extrap
+                    A 0.525033 0.017769 0.691087 0.016384   extrap
+                hr_t1 0.480571 0.026225 0.687673 0.017027   extrap
+                   T0 0.470681 0.028487 0.711723 0.012863   extrap
+                   T1 0.416100 0.044016 0.792929 0.004040   direct
+      heating_rate_t0 0.384730 0.055719 0.592996 0.043013   extrap
+              pausa_s 0.342074 0.075737 0.543505 0.064273     ctrl
+                hr_t3 0.262649 0.129871 0.439926 0.131479   extrap
+                   T3 0.227601 0.163243 0.780437 0.004960   direct
+                   T4 0.189737 0.208290 0.506077 0.084685   direct
+                   T5 0.154987 0.260336 0.159625 0.544071   direct
+                alpha 0.124745 0.316771 0.153682 0.557658   extrap
+                   T2 0.118598 0.329832 0.418824 0.149650   direct
+roi_std_spaziale_mean 0.025431 0.659896 0.199197 0.459558   extrap
+                   T6 0.011817 0.765000 0.066037 0.787324   direct
+               t_star 0.000004 0.995715 0.046417 0.846749   extrap
+
+=== MEDIATION TEST (sorted by R²_X) ===
+              feature     R2_X  R2_pausa_X  delta_pausa  mediator category
+           bed_temp_C 0.615747    0.617922     0.002176      True   direct
+                hr_t2 0.542439    0.546566     0.004127      True   extrap
+              delta_T 0.532454    0.535954     0.003500      True   extrap
+                    A 0.525033    0.548373     0.023340      True   extrap
+                hr_t1 0.480571    0.495195     0.014623      True   extrap
+                   T0 0.470681    0.474413     0.003732      True   extrap
+                   T1 0.416100    0.437759     0.021659      True   direct
+      heating_rate_t0 0.384730    0.391702     0.006972      True   extrap
+                hr_t3 0.262649    0.431927     0.169278     False   extrap
+                   T3 0.227601    0.387392     0.159790     False   direct
+                   T4 0.189737    0.378079     0.188343     False   direct
+                   T5 0.154987    0.344187     0.189201     False   direct
+                alpha 0.124745    0.342688     0.217943     False   extrap
+                   T2 0.118598    0.347464     0.228866     False   direct
+roi_std_spaziale_mean 0.025431    0.360642     0.335212     False   extrap
+                   T6 0.011817    0.342446     0.330629     False   direct
+               t_star 0.000004    0.348984     0.348980     False   extrap
+
+=== PROXY CHECK: bed_temp_C vs pausa_s ===
+Pearson r = -0.7031   p = 0.023324
+Spearman rho = -0.8335   p = 0.002735
+R²(bed_temp_C ~ pausa_s) = 0.4943
+
+Within-pause variability:
+ pausa_s  n  bed_mean  bed_std  bed_min  bed_max  cv_percent
+      10  2   69.4640   1.0649   68.711   70.217      1.5330
+      30  4   65.7358   1.1016   64.356   67.051      1.6757
+      60  2   64.7245   1.0147   64.007   65.442      1.5677
+      90  2   64.6795   1.0416   63.943   65.416      1.6104
+
+Interpretation guide:
+- R² > 0.90: bed_temp_C is essentially a proxy for pause duration.
+- R² 0.60-0.90: strong but incomplete; bed_temp_C carries extra specimen-level variance.
+- R² < 0.60: bed_temp_C is substantially independent of nominal pause duration.

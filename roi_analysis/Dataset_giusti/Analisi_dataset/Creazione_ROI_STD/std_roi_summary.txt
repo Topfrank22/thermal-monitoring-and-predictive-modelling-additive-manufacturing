@@ -1,0 +1,32 @@
+============================================================
+STD ROI REFERENCE SUMMARY
+Dataset       : ROI_wide_2_6_depth_1_2_STD
+ROI shape     : 1 rows x 10 cols
+STD specimens : 2
+Frames used   : 647 (core + roi_complete)
+============================================================
+
+LINEAR DRIFT MODEL
+  T_hat(layer) = 103.1159 + 0.2184 * layer_index
+  Pearson r    = 0.4646
+  p-value      = 5.8144e-36
+  Std error    = 0.016388
+  T_hat(1)     = 103.3343 °C  (reference level)
+
+DRIFT-CORRECTED STD ROI STATISTICS
+  Global mean temperature  : 103.334 °C
+  Mean pixel-wise std dev  : 3.568 °C
+  Global max temperature   : 135.019 °C
+  Global min temperature   : 79.004 °C
+
+PIXEL-WISE MEAN MAP (rows x cols) [°C]
+  116.227  110.056  105.790  102.440   99.951  103.579  101.441   99.416   97.818   96.621
+
+PIXEL-WISE STD MAP (rows x cols) [°C]
+    6.076    4.157    3.474    3.190    3.410    3.789    3.134    2.801    2.688    2.963
+
+PIXEL-WISE MAX MAP (rows x cols) [°C]
+  131.437  131.219  132.849  133.939  135.019  113.849  113.849  113.849  113.849  113.849
+
+PIXEL-WISE MIN MAP (rows x cols) [°C]
+   97.144   98.224   96.940   90.944   80.634   90.084   91.714   92.254   87.694   79.004

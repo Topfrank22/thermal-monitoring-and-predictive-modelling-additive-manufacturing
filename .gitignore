@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Large data files (thermal videos)
+Thermal_videos/
+*.mp4
+*.mov
+*.avi
+
+# Git
+*.orig
+
+# Large generated output datasets (reproducible by running the notebooks)
+roi_analysis/Dataset_giusti/roi_grid_search/grid_search_results/

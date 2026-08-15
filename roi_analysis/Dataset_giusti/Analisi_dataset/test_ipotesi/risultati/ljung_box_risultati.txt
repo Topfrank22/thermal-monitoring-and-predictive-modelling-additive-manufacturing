@@ -1,0 +1,246 @@
+RISULTATI TEST DI INDIPENDENZA — DATASET STD
+============================================================
+Colonna analizzata: roi_mean_C
+Soglia significativita': alpha = 0.05
+Max layer per pagina ACF: MAX_COLS_PER_PAGE = 8
+
+FILTRI APPLICATI:
+  1. frame_type == 'core'   (scarta frame pre/post layer)
+  2. roi_complete == True   (scarta ROI parziali fuori dal pezzo)
+
+STRUTTURA DEI TEST:
+  Ipotesi 1: layer indipendenti -> ACF + Ljung-Box su T_mean per layer
+  Ipotesi 2: frame indipendenti dentro layer -> ACF + Ljung-Box su T_ROI(t)
+
+LETTURA DEI RISULTATI:
+  p-value > 0.05 -> NON si rifiuta H0 (indipendenza ragionevole)
+  p-value < 0.05 -> SI rifiuta H0 (autocorrelazione significativa)
+
+
+============================================================
+Dataset: ROI_wide_2_6_depth_1_2
+  Righe totali nel CSV: 723
+  Dopo filtro frame_type='core': 723 righe (scartate: 0)
+  Dopo filtro roi_complete=True: 647 righe (scartate: 76)
+  -> 10.5% dei frame core aveva ROI parziale
+  Righe usate per i test: 647
+
+============================================================
+IPOTESI 1 — Layer indipendenti | ROI_wide_2_6_depth_1_2
+============================================================
+  Rec-027_std_2: N=29, Ljung-Box p=0.0000 -> RIFIUTA H0 (autocorrelazione significativa!)
+  Rec-G3_std_1: N=22, Ljung-Box p=0.0000 -> RIFIUTA H0 (autocorrelazione significativa!)
+
+============================================================
+IPOTESI 2 — Frame indipendenti dentro layer | ROI_wide_2_6_depth_1_2
+============================================================
+  Rec-027_std_2 Layer 1: N=14, Ljung-Box p=0.7987 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 2: N=11, Ljung-Box p=0.0890 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 3: N=13, Ljung-Box p=0.6910 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 4: N=13, Ljung-Box p=0.5652 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 5: N=8, Ljung-Box p=0.6500 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 6: N=9, Ljung-Box p=0.4316 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 7: N=14, Ljung-Box p=0.7873 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 8: N=12, Ljung-Box p=0.4813 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 1: N=14, Ljung-Box p=0.4591 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 2: N=14, Ljung-Box p=0.7333 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 3: N=14, Ljung-Box p=0.3594 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 4: N=12, Ljung-Box p=0.0199 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 5: N=13, Ljung-Box p=0.2765 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 6: N=14, Ljung-Box p=0.4716 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 7: N=12, Ljung-Box p=0.4323 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 8: N=13, Ljung-Box p=0.0776 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 9: N=10, Ljung-Box p=0.5022 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 10: N=10, Ljung-Box p=0.3966 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 11: N=11, Ljung-Box p=0.2616 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 12: N=15, Ljung-Box p=0.2080 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 13: N=10, Ljung-Box p=0.6209 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 14: N=14, Ljung-Box p=0.3184 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 15: N=11, Ljung-Box p=0.2009 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 16: N=14, Ljung-Box p=0.9786 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 9: N=14, Ljung-Box p=0.6823 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 10: N=15, Ljung-Box p=0.4035 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 11: N=15, Ljung-Box p=0.6067 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 12: N=15, Ljung-Box p=0.4795 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 13: N=14, Ljung-Box p=0.2825 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 14: N=14, Ljung-Box p=0.3580 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 15: N=15, Ljung-Box p=0.6247 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 16: N=14, Ljung-Box p=0.4496 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 17: N=13, Ljung-Box p=0.3754 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 18: N=14, Ljung-Box p=0.6958 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 19: N=11, Ljung-Box p=0.5329 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 20: N=7, Ljung-Box p=0.8747 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 21: N=14, Ljung-Box p=0.0877 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 22: N=11, Ljung-Box p=0.6436 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 23: N=14, Ljung-Box p=0.0069 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 24: N=12, Ljung-Box p=0.0747 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 17: N=14, Ljung-Box p=0.5087 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 18: N=13, Ljung-Box p=0.5082 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 19: N=15, Ljung-Box p=0.9676 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 20: N=14, Ljung-Box p=0.4708 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 21: N=14, Ljung-Box p=0.6827 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 22: N=14, Ljung-Box p=0.0092 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 23: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 24: N=0 — skippato (troppo pochi frame)
+  Rec-027_std_2 Layer 25: N=13, Ljung-Box p=0.2873 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 26: N=9, Ljung-Box p=0.5814 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 27: N=8, Ljung-Box p=0.2219 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 28: N=13, Ljung-Box p=0.0724 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 29: N=13, Ljung-Box p=0.8592 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 25: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 26: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 27: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 28: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 29: N=0 — skippato (troppo pochi frame)
+
+============================================================
+Dataset: ROI_wide_3_7_depth_1_2
+  Righe totali nel CSV: 723
+  Dopo filtro frame_type='core': 723 righe (scartate: 0)
+  Dopo filtro roi_complete=True: 636 righe (scartate: 87)
+  -> 12.0% dei frame core aveva ROI parziale
+  Righe usate per i test: 636
+
+============================================================
+IPOTESI 1 — Layer indipendenti | ROI_wide_3_7_depth_1_2
+============================================================
+  Rec-027_std_2: N=29, Ljung-Box p=0.0000 -> RIFIUTA H0 (autocorrelazione significativa!)
+  Rec-G3_std_1: N=22, Ljung-Box p=0.0000 -> RIFIUTA H0 (autocorrelazione significativa!)
+
+============================================================
+IPOTESI 2 — Frame indipendenti dentro layer | ROI_wide_3_7_depth_1_2
+============================================================
+  Rec-027_std_2 Layer 1: N=14, Ljung-Box p=0.8806 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 2: N=11, Ljung-Box p=0.0223 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 3: N=13, Ljung-Box p=0.9261 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 4: N=13, Ljung-Box p=0.6570 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 5: N=8, Ljung-Box p=0.2120 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 6: N=9, Ljung-Box p=0.4662 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 7: N=13, Ljung-Box p=0.0028 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 8: N=12, Ljung-Box p=0.0319 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 1: N=13, Ljung-Box p=0.3002 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 2: N=13, Ljung-Box p=0.5106 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 3: N=14, Ljung-Box p=0.3160 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 4: N=12, Ljung-Box p=0.0129 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 5: N=13, Ljung-Box p=0.2407 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 6: N=13, Ljung-Box p=0.3793 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 7: N=12, Ljung-Box p=0.3521 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 8: N=13, Ljung-Box p=0.0678 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 9: N=9, Ljung-Box p=0.0133 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 10: N=10, Ljung-Box p=0.3805 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 11: N=11, Ljung-Box p=0.3214 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 12: N=15, Ljung-Box p=0.3005 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 13: N=10, Ljung-Box p=0.5493 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 14: N=14, Ljung-Box p=0.5971 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 15: N=11, Ljung-Box p=0.4356 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 16: N=13, Ljung-Box p=0.0244 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 9: N=14, Ljung-Box p=0.6064 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 10: N=14, Ljung-Box p=0.4515 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 11: N=14, Ljung-Box p=0.2168 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 12: N=15, Ljung-Box p=0.5124 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 13: N=14, Ljung-Box p=0.1627 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 14: N=14, Ljung-Box p=0.2047 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 15: N=15, Ljung-Box p=0.6960 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 16: N=14, Ljung-Box p=0.4393 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 17: N=13, Ljung-Box p=0.8957 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 18: N=14, Ljung-Box p=0.4019 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 19: N=11, Ljung-Box p=0.6553 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 20: N=7, Ljung-Box p=0.7694 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 21: N=14, Ljung-Box p=0.1014 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 22: N=10, Ljung-Box p=0.1841 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 23: N=14, Ljung-Box p=0.0013 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 24: N=12, Ljung-Box p=0.0330 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 17: N=13, Ljung-Box p=0.1834 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 18: N=13, Ljung-Box p=0.4256 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 19: N=14, Ljung-Box p=0.9807 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 20: N=14, Ljung-Box p=0.5441 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 21: N=14, Ljung-Box p=0.4818 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 22: N=14, Ljung-Box p=0.0333 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 23: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 24: N=0 — skippato (troppo pochi frame)
+  Rec-027_std_2 Layer 25: N=13, Ljung-Box p=0.3837 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 26: N=9, Ljung-Box p=0.7991 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 27: N=8, Ljung-Box p=0.1366 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 28: N=13, Ljung-Box p=0.3294 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 29: N=13, Ljung-Box p=0.3923 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 25: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 26: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 27: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 28: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 29: N=0 — skippato (troppo pochi frame)
+
+============================================================
+Dataset: ROI_wide_3_10_depth_1_3
+  Righe totali nel CSV: 723
+  Dopo filtro frame_type='core': 723 righe (scartate: 0)
+  Dopo filtro roi_complete=True: 607 righe (scartate: 116)
+  -> 16.0% dei frame core aveva ROI parziale
+  Righe usate per i test: 607
+
+============================================================
+IPOTESI 1 — Layer indipendenti | ROI_wide_3_10_depth_1_3
+============================================================
+  Rec-027_std_2: N=29, Ljung-Box p=0.0000 -> RIFIUTA H0 (autocorrelazione significativa!)
+  Rec-G3_std_1: N=22, Ljung-Box p=0.0000 -> RIFIUTA H0 (autocorrelazione significativa!)
+
+============================================================
+IPOTESI 2 — Frame indipendenti dentro layer | ROI_wide_3_10_depth_1_3
+============================================================
+  Rec-027_std_2 Layer 1: N=14, Ljung-Box p=0.8255 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 2: N=11, Ljung-Box p=0.0552 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 3: N=12, Ljung-Box p=0.1572 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 4: N=13, Ljung-Box p=0.6129 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 5: N=8, Ljung-Box p=0.3037 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 6: N=8, Ljung-Box p=0.0920 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 7: N=13, Ljung-Box p=0.0173 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 8: N=12, Ljung-Box p=0.0965 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 1: N=13, Ljung-Box p=0.2809 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 2: N=13, Ljung-Box p=0.4210 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 3: N=13, Ljung-Box p=0.2743 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 4: N=12, Ljung-Box p=0.0187 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 5: N=12, Ljung-Box p=0.3237 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 6: N=13, Ljung-Box p=0.3838 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 7: N=11, Ljung-Box p=0.2679 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 8: N=13, Ljung-Box p=0.0864 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 9: N=9, Ljung-Box p=0.0145 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 10: N=9, Ljung-Box p=0.0693 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 11: N=10, Ljung-Box p=0.0819 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 12: N=14, Ljung-Box p=0.0378 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 13: N=9, Ljung-Box p=0.0784 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 14: N=13, Ljung-Box p=0.0162 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 15: N=10, Ljung-Box p=0.0011 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 16: N=13, Ljung-Box p=0.0616 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 9: N=13, Ljung-Box p=0.3234 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 10: N=14, Ljung-Box p=0.6585 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 11: N=14, Ljung-Box p=0.0724 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 12: N=14, Ljung-Box p=0.1345 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 13: N=13, Ljung-Box p=0.0895 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 14: N=13, Ljung-Box p=0.0620 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 15: N=14, Ljung-Box p=0.1764 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 16: N=13, Ljung-Box p=0.2650 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 17: N=12, Ljung-Box p=0.4936 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 18: N=14, Ljung-Box p=0.5231 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 19: N=10, Ljung-Box p=0.0776 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 20: N=6, Ljung-Box p=0.3157 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 21: N=13, Ljung-Box p=0.0251 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 22: N=10, Ljung-Box p=0.6314 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 23: N=14, Ljung-Box p=0.0619 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 24: N=12, Ljung-Box p=0.0476 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 17: N=13, Ljung-Box p=0.1593 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 18: N=12, Ljung-Box p=0.1630 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 19: N=14, Ljung-Box p=0.9913 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 20: N=13, Ljung-Box p=0.0932 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 21: N=13, Ljung-Box p=0.1860 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 22: N=13, Ljung-Box p=0.0054 -> RIFIUTA H0!
+  Rec-G3_std_1 Layer 23: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 24: N=0 — skippato (troppo pochi frame)
+  Rec-027_std_2 Layer 25: N=12, Ljung-Box p=0.0773 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 26: N=8, Ljung-Box p=0.6930 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 27: N=8, Ljung-Box p=0.1143 -> NON RIFIUTA H0
+  Rec-027_std_2 Layer 28: N=12, Ljung-Box p=0.0221 -> RIFIUTA H0!
+  Rec-027_std_2 Layer 29: N=12, Ljung-Box p=0.0596 -> NON RIFIUTA H0
+  Rec-G3_std_1 Layer 25: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 26: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 27: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 28: N=0 — skippato (troppo pochi frame)
+  Rec-G3_std_1 Layer 29: N=0 — skippato (troppo pochi frame)

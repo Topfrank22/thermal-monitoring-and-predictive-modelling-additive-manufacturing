@@ -1,0 +1,50 @@
+{
+  "Rec-022_10s_1": {
+    "x_left": 290,
+    "x_right": 357
+  },
+  "Rec-024_90s_1": {
+    "x_left": 290,
+    "x_right": 356
+  },
+  "Rec-025_30s_1": {
+    "x_left": 289,
+    "x_right": 357
+  },
+  "Rec-026_60s_2": {
+    "x_left": 290,
+    "x_right": 357
+  },
+  "Rec-027_std_2": {
+    "x_left": 290,
+    "x_right": 357
+  },
+  "Rec-028_30s_2": {
+    "x_left": 290,
+    "x_right": 357
+  },
+  "Rec-029_10s_2": {
+    "x_left": 290,
+    "x_right": 357
+  },
+  "Rec-030_90s_2": {
+    "x_left": 290,
+    "x_right": 356
+  },
+  "Rec-031_30s_3": {
+    "x_left": 290,
+    "x_right": 356
+  },
+  "Rec-032_30s_4": {
+    "x_left": 290,
+    "x_right": 356
+  },
+  "Rec-G3_S60_1": {
+    "x_left": 317,
+    "x_right": 388
+  },
+  "Rec-G3_std_1": {
+    "x_left": 292,
+    "x_right": 362
+  }
+}

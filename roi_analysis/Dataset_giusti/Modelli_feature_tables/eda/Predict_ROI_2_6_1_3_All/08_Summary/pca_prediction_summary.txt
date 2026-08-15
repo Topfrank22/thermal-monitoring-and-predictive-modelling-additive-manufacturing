@@ -1,0 +1,24 @@
+PCA-BASED PREDICTION OF BREAKING LOAD — ALL SPECIMENS (LOOCV)
+=================================================================
+
+Model: Linear PC1
+  LOOCV RMSE : 0.3007 kg
+  LOOCV R²   : 0.5548
+
+Model: Linear PC1+PC2
+  LOOCV RMSE : 0.2789 kg
+  LOOCV R²   : 0.6171
+
+Model: Polynomial deg-2
+  LOOCV RMSE : 0.2646 kg
+  LOOCV R²   : 0.6554
+
+Model: SVR RBF
+  LOOCV RMSE : 0.3999 kg
+  LOOCV R²   : 0.2129
+
+Model: GPR RBF
+  LOOCV RMSE : 0.3590 kg
+  LOOCV R²   : 0.3656
+
+Best by LOOCV RMSE: Polynomial deg-2  (0.2646 kg)

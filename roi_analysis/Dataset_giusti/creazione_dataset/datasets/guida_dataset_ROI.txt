@@ -1,0 +1,62 @@
+GUIDA AL DATASET ROI
+====================
+
+IDENTIFICATORI DEL FRAME
+--------------------------
+specimen        : Nome del provino (es. Rec-022_10s_1)
+layer_index     : Indice del layer stampato (1, 2 o 3)
+obs_index       : Indice osservazione dentro il layer — riparte da 1 ad ogni layer
+frame_idx       : Indice assoluto del frame nella cartella _frames (0001.png -> 1)
+frame_type      : Fase della passata ugello: 'pre' | 'core' | 'post'
+
+
+POSIZIONE UGELLO (nozzle tracker)
+-----------------------------------
+tip_x           : Coordinata X della punta dell'ugello [pixel]
+tip_y           : Coordinata Y della punta dell'ugello [pixel] (asse y verso il basso)
+direction_deg   : Angolo di movimento rispetto al frame precedente [gradi]
+                  0deg=destra, 90deg=su, -90deg=giu
+                  NaN al primo frame di ogni layer
+movement_px     : Modulo spostamento rispetto al frame precedente [pixel]
+                  NaN al primo frame di ogni layer
+confidence      : Score template matching [0-1]
+                  Quanto il kernel corrisponde al frame — valori alti = tracking affidabile
+
+
+GEOMETRIA ROI
+--------------
+Coordinate assolute del rettangolo ROI nel frame. I pixel sul bordo sono INCLUSI.
+
+roi_c0          : Colonna sinistra della ROI (x assoluta)
+roi_r0          : Riga superiore della ROI (y assoluta)
+roi_c1          : Colonna destra della ROI (x assoluta)
+roi_r1          : Riga inferiore della ROI (y assoluta)
+
+Dimensione ROI  : (roi_r1 - roi_r0 + 1) righe  x  (roi_c1 - roi_c0 + 1) colonne
+
+
+VALIDITA' ROI (bordi pezzo)
+-----------------------------
+Indica quanta parte della ROI cade sopra il pezzo stampato (non nell'aria).
+I bordi x_left / x_right per ogni specimen sono definiti in piece_boundaries.json.
+
+roi_valid_frac  : Frazione colonne ROI comprese tra x_left e x_right del pezzo [0.0-1.0]
+                  NaN se il pezzo non ha boundaries definiti
+roi_complete    : True  -> tutta la ROI e' sul pezzo (roi_valid_frac == 1.0)
+                  False -> ROI parzialmente fuori dal pezzo
+                  None  -> boundaries non disponibili per questo specimen
+
+  Esempio: ROI larga 5 colonne, 3 sul pezzo -> roi_valid_frac=0.6, roi_complete=False
+
+
+METRICHE TERMICHE
+------------------
+Tutte in gradi Celsius. Calcolate convertendo i pixel [0-255] al range termico [T_MIN, T_MAX].
+
+roi_mean_C      : Temperatura media della ROI
+roi_max_C       : Temperatura massima
+roi_min_C       : Temperatura minima
+roi_std_C       : Deviazione standard — misura disomogeneita' termica nella ROI
+roi_median_C    : Mediana — robusta agli outlier rispetto alla media
+roi_pixels_raw  : Tutti i valori in C separati da virgola (es. "152.30,148.70,...")
+                  Utile per analisi pixel-by-pixel o feature engineering custom

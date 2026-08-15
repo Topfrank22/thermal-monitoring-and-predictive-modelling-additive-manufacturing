@@ -1,0 +1,8 @@
+peso_totale_kg,Rec-G3_std_1,Rec-027_std_2,Rec-022_10s_1,Rec-029_10s_2,Rec-025_30s_1,Rec-028_30s_2,Rec-031_30s_3,Rec-032_30s_4,Rec-G3_S60_1,Rec-026_60s_2,Rec-024_90s_1,Rec-030_90s_2
+0.5,ok,ok,ok,ok,ok,ok,ok,ok,ok,ok,ok,ok
+1.25,ok,ok,ok,ok,ok,ok,ok,ok,ok,ok,ok,ok
+1.75,ok,ok,ok,ok,ROTTO,ROTTO,ROTTO,ok,ok,ok,ROTTO,ROTTO
+2.0,ok,ok,ok,ok,,,,ROTTO,ROTTO,ROTTO,,
+2.5,ok,ROTTO,ROTTO,ROTTO,,,,,,,,
+3.25,ROTTO,,,,,,,,,,,
+3.75,/,,,,,,,,,,,

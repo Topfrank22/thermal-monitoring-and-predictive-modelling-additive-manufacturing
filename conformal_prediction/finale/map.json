@@ -1,0 +1,74 @@
+[
+  {
+    "id": 991,
+    "start": 0,
+    "stop": 0,
+    "note": "STANDARD (Rec-G3_std)"
+  },
+  {
+    "id": 101,
+    "start": 2711,
+    "stop": 2440,
+    "note": "Rec-022_10s"
+  },
+  {
+    "id": 601,
+    "start": 1705,
+    "stop": 0,
+    "note": "Rec-G3_S60"
+  },
+  {
+    "id": 301,
+    "start": 3081,
+    "stop": 2315,
+    "note": "Rec-025_30s"
+  },
+  {
+    "id": 901,
+    "start": 4721,
+    "stop": 2436,
+    "note": "Rec-024_90s"
+  },
+  {
+    "id": 992,
+    "start": 0,
+    "stop": 0,
+    "note": "STANDARD (Rec-027)"
+  },
+  {
+    "id": 602,
+    "start": 3893,
+    "stop": 2377,
+    "note": "Rec-026_60s"
+  },
+  {
+    "id": 302,
+    "start": 3170,
+    "stop": 2397,
+    "note": "Rec-028_30s"
+  },
+  {
+    "id": 102,
+    "start": 2618,
+    "stop": 2358,
+    "note": "Rec-029_10s"
+  },
+  {
+    "id": 902,
+    "start": 4693,
+    "stop": 2429,
+    "note": "Rec-030_90s"
+  },
+  {
+    "id": 303,
+    "start": 3219,
+    "stop": 2456,
+    "note": "Rec-031_30s"
+  },
+  {
+    "id": 304,
+    "start": 3221,
+    "stop": 2453,
+    "note": "Rec-032_30s"
+  }
+]
